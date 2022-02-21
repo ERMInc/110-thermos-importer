@@ -12,7 +12,7 @@
            [org.locationtech.jts.geom.util LineStringExtracter]
            org.geotools.coverage.grid.GridCoverage2D
            org.geotools.coverage.grid.io.GridFormatFinder
-           org.geotools.factory.Hints
+           org.geotools.util.factory.Hints
            org.geotools.gce.geotiff.GeoTiffFormat
            org.geotools.geometry.DirectPosition2D
            org.geotools.geometry.jts.ReferencedEnvelope

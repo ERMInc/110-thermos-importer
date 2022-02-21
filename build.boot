@@ -9,26 +9,26 @@
           :repositories #(concat % geo-repos)
           :dependencies   '[[seancorfield/boot-tools-deps "0.4.7" :scope "test"]
                             [adzerk/boot-test "RELEASE" :scope "test"]
-                            [org.clojure/clojure "1.9.0"]
-                            [org.clojure/tools.cli "0.3.5"]
-                            [org.clojure/tools.logging "0.5.0"]
-                            [digest "1.4.6"]
+                            [org.clojure/clojure "1.10.3"]
+                            [org.clojure/tools.cli "1.0.206"]
+                            [org.clojure/tools.logging "1.2.2"]
+                            [digest/digest "1.4.6"]
                             
-                            [org.geotools/gt-data "20.0"]
-                            [org.geotools/gt-shapefile "20.0"]
-                            [org.geotools/gt-coverage "20.0"]
-                            [org.geotools/gt-geotiff "20.0"]
-                            [org.geotools/gt-geojson "20.0"]
-                            [org.geotools/gt-geopkg "20.0"]
-                            [org.geotools/gt-referencing "20.0"] ; Coordinate transformations
-                            [org.geotools/gt-epsg-hsql "20.0"] ; Coordinate system definitions
+                            [org.geotools/gt-main "26.1"]
+                            [org.geotools/gt-shapefile "26.1"]
+                            [org.geotools/gt-coverage "26.1"]
+                            [org.geotools/gt-geotiff "26.1"]
+                            [org.geotools/gt-geojson "26.1"]
+                            [org.geotools/gt-geopkg "26.1"]
+                            [org.geotools/gt-referencing "26.1"] ; Coordinate transformations
+                            [org.geotools/gt-epsg-wkt "26.1"] ; Coordinate system definitions
                             
-                            [com.github.davidmoten/rtree "0.8.0.4"]
-                            [org.clojure/data.csv "0.1.4"]
-                            [org.clojure/data.json "0.2.6"]
-                            [clj-http "3.9.0"]
+                            [com.github.davidmoten/rtree "0.8.7"]
+                            [org.clojure/data.csv "1.0.0"]
+                            [org.clojure/data.json "2.4.0"]
+                            [clj-http/clj-http "3.9.0"]
                             
-                            [better-cond "1.0.1"]
+                            [better-cond/better-cond "1.0.1"]
 
                             ])
 
