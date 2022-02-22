@@ -18,7 +18,7 @@
   org.geotools/gt-geojson {:mvn/version "26.1"}
   org.geotools/gt-geopkg {:mvn/version "26.1"}
   org.geotools/gt-referencing {:mvn/version "26.1"} ; Coordinate transformations
-  org.geotools/gt-epsg-wkt {:mvn/version "26.1"} ; Coordinate system definitions
+  org.geotools/gt-epsg-hsql {:mvn/version "26.1"} ; Coordinate system definitions
 
   com.github.davidmoten/rtree {:mvn/version "0.8.7"}
   org.clojure/data.csv {:mvn/version "1.0.0"}
