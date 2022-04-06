@@ -178,7 +178,7 @@
        (let [crs (.getCoordinateSystem crs)
              naxes (.getDimension crs)
              units (for [i (range naxes)] (.getUnit (.getAxis crs i)))]
-         (every? #(= tec.uom.se.unit.Units/METRE %) units))))
+         (every? #(= tech.units.indriya.unit.Units/METRE %) units))))
 
 (defn sensible-projection
   "Create a projection of a certain type for the given features in their input CRS"
