@@ -40,7 +40,7 @@
                 (let [now (System/currentTimeMillis)
                       delta (- now start)]
                   (when (> delta 5000)
-                    (log/info (format "\n%s [%s%%, %.1fm]"
+                    (log/info (format "%s [%s%%, %.1fm]"
                                       tag
                                       (int (/ (* 100 n) total))
                                       (float (/ (* (- total n)
