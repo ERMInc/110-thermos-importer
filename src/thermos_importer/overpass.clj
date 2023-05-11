@@ -13,8 +13,8 @@
   (:import [java.io ByteArrayInputStream]
            [java.net URLEncoder]
 
-           [com.github.davidmoten.rtree RTree]
-           [com.github.davidmoten.rtree.geometry Geometries]
+           [com.github.davidmoten.rtree2 RTree]
+           [com.github.davidmoten.rtree2.geometry Geometries]
            
            [org.geotools.geometry.jts JTSFactoryFinder]
            

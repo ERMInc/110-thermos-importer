@@ -8,8 +8,8 @@
             [clojure.tools.logging :as log]
             [cljts.core :as jts]
             [clojure.set :as set])
-  (:import [com.github.davidmoten.rtree RTree Entry]
-           [com.github.davidmoten.rtree.geometry Geometries Rectangle]
+  (:import [com.github.davidmoten.rtree2 RTree Entry]
+           [com.github.davidmoten.rtree2.geometry Geometries Rectangle]
 
            [org.locationtech.jts.geom Geometry Point Envelope PrecisionModel GeometryFactory Coordinate LineString]
            [org.locationtech.jts.operation.distance DistanceOp GeometryLocation]
@@ -100,7 +100,7 @@
                   :or {distance NEARNESS limit NEIGHBOURS}}]
   (let [point 
         (cond
-          (instance? com.github.davidmoten.rtree.geometry.Point point)
+          (instance? com.github.davidmoten.rtree2.geometry.Point point)
           point
 
           (vector? point)
@@ -118,7 +118,7 @@
         ^RTree index @index]
     (for [^Entry entry
           (-> (.nearest index
-                        ^com.github.davidmoten.rtree.geometry.Point point
+                        ^com.github.davidmoten.rtree2.geometry.Point point
                         (double distance) (int limit))
               .toBlocking .toIterable)]
       (.value entry))))

@@ -6,8 +6,8 @@
             [thermos-importer.spatial :as spatial]
             [thermos-importer.util :as util]
             [clojure.tools.logging :as log])
-  (:import com.github.davidmoten.rtree.geometry.Geometries
-           com.github.davidmoten.rtree.RTree
+  (:import com.github.davidmoten.rtree2.geometry.Geometries
+           com.github.davidmoten.rtree2.RTree
            [org.locationtech.jts.geom Coordinate GeometryFactory Polygon]
            [org.locationtech.jts.geom.util LineStringExtracter]
            org.geotools.coverage.grid.GridCoverage2D

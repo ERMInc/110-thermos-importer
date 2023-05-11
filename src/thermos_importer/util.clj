@@ -2,10 +2,10 @@
 ;; Licensed under the Reciprocal Public License v1.5. See LICENSE for licensing details.
 
 (ns thermos-importer.util
-  (:import [com.github.davidmoten.rtree.geometry Geometries Rectangle]
+  (:import [com.github.davidmoten.rtree2.geometry Geometries Rectangle]
            [org.locationtech.jts.geom Geometry]
            org.locationtech.jts.geom.Envelope
-           com.github.davidmoten.rtree.RTree)
+           com.github.davidmoten.rtree2.RTree)
   (:require [clojure.string :as s]))
 
 (defn- mutable-memoize
@@ -50,10 +50,7 @@
     features)))
 
 (defn search-rtree [^RTree tree ^Rectangle rect]
-  (for [entry (.. tree
-                  (search rect)
-                  (toBlocking)
-                  (toIterable))]
+  (for [entry (into [] (.search tree rect))]
     (.value entry)))
 
 (defn envelope->rect [^Envelope bbox]
